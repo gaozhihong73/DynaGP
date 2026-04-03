@@ -23,7 +23,7 @@
 
 ## Installation
 
-```cmd
+```bash
 # Create a new conda environment
 conda create -n DynaGS python=3.10.11
 
@@ -65,7 +65,7 @@ tqdm==4.66.1
 
 #### Usage
 
-```cmd
+```bash
 # Training with Default Config
 python train.py
 
@@ -118,16 +118,16 @@ python train.py \
 
 #### Usage
 
-```cmd
+```bash
 # Inference with Default Test Set
 python predict.py
 
 # Inference with External Data
 python predict.py \
-  --model_path "outputs/tfpp/exp_2026/models/best_model.pth" \
-  --scaler_path "outputs/tfpp/exp_2026/scalers/scaler.pkl" \
-  --output_csv "outputs/predict/testset_predictions.csv" \
-  --input_snp "dataset/new_samples.npy"
+  --model_path outputs/tfpp/exp_2026/models/best_model.pth \
+  --scaler_path outputs/tfpp/exp_2026/scalers/scaler.pkl \
+  --output_csv outputs/predict/testset_predictions.csv \
+  --input_snp dataset/new_samples.npy
 ```
 
 #### Optional Parameters
