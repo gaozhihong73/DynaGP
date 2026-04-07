@@ -15,8 +15,7 @@ def parse_args():
     # ================= 数据集与特征配置 =================
     parser.add_argument('--test_ratio', type=float, default=0.1, help='测试集比例')
     parser.add_argument('--val_ratio', type=float, default=0.1, help='验证集比例')
-    parser.add_argument('--pheno_names', type=str, nargs='+',
-                        default=['RGBVI', 'WI', 'ExB', 'COM', 'GreenCoverage', 'bn', 'IPCA', 'NDI'],
+    parser.add_argument('--pheno_names', type=str, nargs='+', default=['GreenCoverage'],
                         help='需要预测的表型名称列表，需要与表型文件名对应，例如: --phenotype_names Yield PH GW ')
     parser.add_argument('--time_coordinates', type=float, nargs='+',
                         default=[10, 12, 14, 15, 17, 19, 24, 26, 37, 44, 51, 65, 80, 101],
@@ -38,7 +37,7 @@ def parse_args():
     parser.add_argument('--seed', type=int, default=73, help='随机种子')
     parser.add_argument('--is_save', type=bool, default=True, help='是否保存训练数据到本地')
     parser.add_argument('--use_warmup', type=bool, default=True, help='是否使用Warmup')
-    parser.add_argument('--warmup_epochs', type=int, default=8, help='warmup轮数')
+    parser.add_argument('--warmup_epochs', type=int, default=8, help='Warmup轮数')
 
     # ================= 模型参数 =================
     parser.add_argument('--d_model', type=int, default=64, help='特征维度')
