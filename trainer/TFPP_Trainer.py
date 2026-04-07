@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader
 
 from config import TFPPConfig
 from dataloader import TFPPDataset, get_dataloader, get_dataloader_with_kfold
-from model import TFPP, NetGP_Adapted, DSGWAS_Adapted, PKDP_Adapted, DNAWhisper_Adapted
+from model import TFPP
 from utils import MSEPCCLoss, calculate_metrics_by_average, calculate_phenotype_metrics_by_time, \
     denormalize_phenotype, load_scalers, save_scalers
 from .Base_Trainer import BaseTrainer
