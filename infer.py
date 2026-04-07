@@ -51,7 +51,7 @@ def parse_args():
 def predict():
     args = parse_args()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    Path("outputs/predict").mkdir(parents=True, exist_ok=True)
+    Path("outputs/infer").mkdir(parents=True, exist_ok=True)
 
     # 1. 加载归一化器信息
     print(f"[*] 正在加载归一化器: {args.scaler_path}")
